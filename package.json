@@ -1,10 +1,10 @@
 {
-  "name": "generator-ng-component",
+  "name": "generator-bw-ng-component",
   "version": "0.1.0",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "DaftMonk/generator-ng-component",
+  "repository": "kulor/generator-ng-component",
   "author": {
     "name": "Tyler Henkel",
     "email": "",

@@ -16,7 +16,7 @@ $ npm install -g yo generator-bw-ng-component
 Finally, initiate the generator:
 
 ```
-$ yo ng-component
+$ yo bw-ng-component
 ```
 
 ### Generate a directive

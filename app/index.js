@@ -19,6 +19,7 @@ var NgComponentGenerator = yeoman.generators.Base.extend({
       'directiveDirectory': this.options.directiveDirectory || 'app/components/',
       'filterDirectory': this.options.filterDirectory || 'app/components/',
       'serviceDirectory': this.options.serviceDirectory || 'app/components/',
+      'sassDirectory': this.options.sassDirectory || 'app/sass/',
       'basePath': this.options.basePath || 'app',
       'moduleName': this.options.moduleName || '',
       'filters': this.options.filters || ['uirouter', 'jasmine'],

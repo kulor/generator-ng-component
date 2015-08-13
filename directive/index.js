@@ -11,29 +11,11 @@ var Generator = module.exports = function Generator() {
 
 util.inherits(Generator, ScriptBase);
 
-Generator.prototype.askFor = function askFor() {
-  var self = this;
+Generator.prototype.init = function init() {
   var done = this.async();
-
-  var prompts = [
-    {
-      name: 'dir',
-      message: 'Where would you like to create this directive?',
-      default: self.config.get('directiveDirectory')
-    },
-    {
-      type:'confirm',
-      name: 'complex',
-      message: 'Does this directive need an external html file?',
-      default: true
-    }
-  ];
-
-  this.prompt(prompts, function (props) {
-    this.dir = path.join(props.dir, this.name);
-    this.complex = props.complex;
-    done();
-  }.bind(this));
+  this.dir = path.join(this.config.get('directiveDirectory'), this.name);
+  this.complex = true;
+  done();
 };
 
 Generator.prototype.createFiles = function createFiles() {
@@ -48,3 +30,15 @@ Generator.prototype.createFiles = function createFiles() {
   this.htmlUrl = ngUtil.relativeUrl(basePath, path.join(this.dir, this.name + '.html'));
   ngUtil.copyTemplates(this, 'directive', templateDir, configName);
 };
+
+Generator.prototype.updateSassReferences = function updateSassReferences() {
+  // Append component style
+  var scssUrl = path.join('../js/components', this.name, this.name);
+  var rootScssFilePath = path.join(this.config.get('sassDirectory'), 'main.scss');
+  var rootScssFile = this.readFileAsString(rootScssFilePath);
+  console.log(rootScssFile.indexOf(scssUrl));
+  if (rootScssFile.indexOf(scssUrl) >= 0) return; // Don't add the include if it already exists
+
+  rootScssFile = rootScssFile + "\n@import '" + scssUrl + "';";
+  this.write(rootScssFilePath, rootScssFile);
+}

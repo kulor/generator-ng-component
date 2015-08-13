@@ -1,9 +1,11 @@
-# generator-ng-component [![Build Status](https://secure.travis-ci.org/DaftMonk/generator-ng-component.png?branch=master)](https://travis-ci.org/DaftMonk/generator-ng-component)
+# generator-ng-component
 
 > [Yeoman](http://yeoman.io) generator
 
 
-## Getting Started
+## Bloom & Wild's app generator
+
+It's highly unlikely this fork will be useful for people outside bloomandwild.com. Check out the fork source for a more generic Angular generator.
 
 ### Yeoman Generators
 

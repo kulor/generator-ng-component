@@ -1,7 +1,7 @@
 {
   "name": "generator-bw-ng-component",
   "version": "0.1.0",
-  "description": "Yeoman generator",
+  "description": "Yeoman generator for the Bloom & Wild Angular application",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "kulor/generator-ng-component",
@@ -10,6 +10,11 @@
     "email": "",
     "url": "https://github.com/DaftMonk"
   },
+  "contributors": {
+    "name": "James Broad",
+    "email": "",
+    "url": "http://kulor.com"
+  },
   "engines": {
     "node": ">=0.10.0"
   },
@@ -17,7 +22,8 @@
     "test": "mocha"
   },
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "bloom-and-wild"
   ],
   "dependencies": {
     "chalk": "~0.4.0",

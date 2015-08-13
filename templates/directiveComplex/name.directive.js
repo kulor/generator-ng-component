@@ -3,7 +3,7 @@
 angular.module('<%= scriptAppName %>')
   .directive('<%= cameledName %>', function () {
     return {
-      templateUrl: '<%= htmlUrl %>',
+      templateUrl: 'templates/<%= htmlUrl %>',
       restrict: 'EA',
       link: function (scope, element, attrs) {
       }

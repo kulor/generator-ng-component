@@ -16,7 +16,7 @@ var Generator = module.exports = function Generator() {
   this.scriptAppName = this.config.get('moduleName') || this._.camelize(this.appname) + ngUtils.appName(this);
 
   this.cameledName = this._.camelize(this.name);
-  this.classedName = this._.classify(this.name);
+  this.classedName = this._.dasherize(this.name);
 
   this.hasFilter = function(filter) {
     return this.config.get('filters').indexOf(filter) !== -1;

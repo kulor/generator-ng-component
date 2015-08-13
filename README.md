@@ -5,7 +5,7 @@
 
 ## Bloom & Wild's app generator
 
-It's highly unlikely this fork will be useful for people outside bloomandwild.com. Check out the fork source for a more generic Angular generator.
+It's highly unlikely this fork will be useful for people outside [Bloom & Wild](http://bloomandwild.com). Check out the fork source for a more generic Angular generator.
 
 ### Yeoman Generators
 
